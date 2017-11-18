@@ -6,12 +6,10 @@
  * Create by NuSa
  * ========================================*/
 
-using System;
 using UnityEngine;
 
-[Serializable]
-public class IM_KeyInfo  {
+public class IM_KeyText : MonoBehaviour {
 
-    public string Function = "None";
-    public KeyCode Key;
+    public GameObject functionText;
+    public GameObject KeyText;
 }

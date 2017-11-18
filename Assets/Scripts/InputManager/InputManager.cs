@@ -27,7 +27,7 @@ public class InputManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
+
 	}
 	
 	// Update is called once per frame
@@ -50,6 +50,7 @@ public class InputManager : MonoBehaviour {
 
     }
 
+    // Save key in PlayerPrefs
     public void Set_Key(IM_KeyInfo _key)
     {
         for (int i = 0; i < AllKeys.Count; i++)
@@ -67,7 +68,65 @@ public class InputManager : MonoBehaviour {
         }
     }
 
+    public static bool GetKeyDown(string _function)
+    {
+        return Input.GetKeyDown((KeyCode)get_Instance().Get_Key(_function));
+    }
 
+    public static bool GetKey(string _function)
+    {
+        return Input.GetKey((KeyCode)get_Instance().Get_Key(_function));
+    }
+
+    public static bool GetKeyUp(string _function)
+    {
+        return Input.GetKeyUp((KeyCode)get_Instance().Get_Key(_function));
+    }
+
+    /* ==========================================================
+     *                     Get_Key(string)
+     * ----------------------------------------------------------
+     * @_function : its name of input (exemple : Jump)
+     *
+     * return : if input name is found, function return KeyCode
+     * if input is not found, function return KeyCode.None
+     * ========================================================= */
+    public int Get_Key(string _function)
+    {
+        for (int i = 0; i < AllKeys.Count; i++)
+        {
+            if (AllKeys[i].Function == _function)
+            {
+                return (int)AllKeys[i].Key;
+            }
+        }
+
+        Debug.LogError("Key for " + _function + " is not setup.");
+
+        return 0;
+    }
+
+    /* ===============================================
+     *         DetectIfKeyIsUsed(KeyCode)
+     * -----------------------------------------------
+     * @_key : its Keycode you want check if used
+     *
+     * return : if Keycode is already used return true
+     * if Keycode if not used return false
+     * ===============================================*/
+
+    public bool DetectIfKeyIsUsed(KeyCode _key)
+    {
+        for (int i = 0; i < AllKeys.Count; i++)
+        {
+            if (AllKeys[i].Key == _key)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
 
 
     /* ==========================================

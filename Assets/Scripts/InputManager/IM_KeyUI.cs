@@ -16,6 +16,7 @@ public class IM_KeyUI : MonoBehaviour {
 
     public List<GameObject> slotInput;
     public GameObject WaitingInput;
+    public GameObject CloseButton;
 
     private bool WaitKey = false;
     private string WaitingKey;
@@ -24,6 +25,7 @@ public class IM_KeyUI : MonoBehaviour {
 	void Start ()
     {
         WaitingInput.SetActive(false);
+        CloseButton.SetActive(true);
         LoadKey_UI();
     }
 	
@@ -53,6 +55,7 @@ public class IM_KeyUI : MonoBehaviour {
             WaitKey = true;
             WaitingInput.GetComponentInChildren<Text>().text = "PRESS A KEY - press escp for not change";
             WaitingInput.SetActive(true);
+            CloseButton.SetActive(false); //Disable close button
         }
         else
         {
@@ -75,14 +78,13 @@ public class IM_KeyUI : MonoBehaviour {
                     KeyDetect(dkKey);
                 }
             }
-            
-            //InputManager.get_Instance()
 
             if (Input.GetKey(KeyCode.Escape))
             {
                 WaitKey = false;
                 WaitingKey = "";
                 WaitingInput.SetActive(false);
+                CloseButton.SetActive(true);
             }
         }
     }
@@ -99,5 +101,6 @@ public class IM_KeyUI : MonoBehaviour {
         WaitingKey = "";
         WaitKey = false;
         WaitingInput.SetActive(false);
+        CloseButton.SetActive(true);
     }
 }

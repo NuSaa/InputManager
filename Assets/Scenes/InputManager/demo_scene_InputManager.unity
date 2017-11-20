@@ -285,7 +285,7 @@ Prefab:
     - target: {fileID: 114718646997019578, guid: e17c31a010fd92f4188212fb04b01336,
         type: 2}
       propertyPath: slotInput.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224580392076152158, guid: e17c31a010fd92f4188212fb04b01336,
         type: 2}
@@ -657,11 +657,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114419890590782194, guid: 8d97de10b476e9f4c9bd5bd058c726cf,
-        type: 2}
-      propertyPath: AllKeys.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4384909806117128, guid: 8d97de10b476e9f4c9bd5bd058c726cf, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -693,36 +688,6 @@ Prefab:
     - target: {fileID: 4384909806117128, guid: 8d97de10b476e9f4c9bd5bd058c726cf, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114419890590782194, guid: 8d97de10b476e9f4c9bd5bd058c726cf,
-        type: 2}
-      propertyPath: AllKeys.Array.data[6].Function
-      value: Action
-      objectReference: {fileID: 0}
-    - target: {fileID: 114419890590782194, guid: 8d97de10b476e9f4c9bd5bd058c726cf,
-        type: 2}
-      propertyPath: AllKeys.Array.data[6].Key
-      value: 101
-      objectReference: {fileID: 0}
-    - target: {fileID: 114419890590782194, guid: 8d97de10b476e9f4c9bd5bd058c726cf,
-        type: 2}
-      propertyPath: AllKeys.Array.data[4].Function
-      value: Jump
-      objectReference: {fileID: 0}
-    - target: {fileID: 114419890590782194, guid: 8d97de10b476e9f4c9bd5bd058c726cf,
-        type: 2}
-      propertyPath: AllKeys.Array.data[4].Key
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 114419890590782194, guid: 8d97de10b476e9f4c9bd5bd058c726cf,
-        type: 2}
-      propertyPath: AllKeys.Array.data[5].Function
-      value: Action
-      objectReference: {fileID: 0}
-    - target: {fileID: 114419890590782194, guid: 8d97de10b476e9f4c9bd5bd058c726cf,
-        type: 2}
-      propertyPath: AllKeys.Array.data[5].Key
-      value: 101
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d97de10b476e9f4c9bd5bd058c726cf, type: 2}

@@ -60,7 +60,3 @@ MonoBehaviour:
     Key: 113
   - Function: Right
     Key: 100
-  - Function: Jump
-    Key: 32
-  - Function: Action
-    Key: 101
